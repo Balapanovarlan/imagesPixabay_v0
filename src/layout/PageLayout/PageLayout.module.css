@@ -1,0 +1,19 @@
+.wrapper {
+    display: flex;
+    position: relative;
+    background-color: #13131a;
+}
+
+.aside {
+    position: sticky;
+    height: 100dvh;
+    top: 0;
+    max-width: 350px;
+    width: 100%;
+    background-color: #1b1b22;
+    padding: 30px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
