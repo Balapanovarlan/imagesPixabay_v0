@@ -90,4 +90,30 @@
     justify-content: center;
     align-items: center;
     gap: 10px;
+    position: relative;
+}
+
+.downloadButton{
+    position: absolute;
+    top: 0px;
+    right: -15px;
+    transform: translateX(-50%);
+    padding: 8px 12px;
+    background-color: rgba(0, 0, 0, 0.7); /* Полупрозрачный фон */
+    color: white;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    opacity: 0; 
+    transition: opacity 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+
+.card:hover .downloadButton {
+    opacity: 1; 
+    transform: translateX(-50%) scale(1.1);
+}
+.downloadButton:hover {
+    background-color: rgba(0, 0, 0, 0.9); /* Затемняем при наведении */
 }
