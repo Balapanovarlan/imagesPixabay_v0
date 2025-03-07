@@ -87,6 +87,7 @@ const Home = () => {
         refetch()
     }
 
+
     return (
         <PageLayout>
             <div className={styles.wrapper}>
@@ -115,7 +116,10 @@ const Home = () => {
                 }
                 {sortedImages&& sortedImages.length > 0 &&
                     <div className={styles.gallery}>
-                        {imagesData.pages.flat().map(item => (
+                        {imagesData.pages
+                        .flat()
+                        .filter((item, index, arr) => arr.findIndex((x) => x.id === item.id) === index)
+                        .map(item => (
                            <div className={styles.card} 
                                 key={item.id}
                                 onMouseEnter={() => setHoveredImage(item.id)}

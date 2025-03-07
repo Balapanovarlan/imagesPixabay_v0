@@ -2,17 +2,16 @@ import axios from "axios";
 
 const API_KEY = import.meta.env.VITE_API_KEY;
 
-export const getImages = async (searchStr, page) => {
+export const getImages = async (searchStr, page, type) => {
 
 
     const { data } = await axios.get(
-        `https://pixabay.com/api/` ,
+        `https://pixabay.com/api/${type}/` ,
         {
             params: {
                 key: API_KEY,
                 q: searchStr,
-                image_type: 'photo',
-                page,
+                page:1,
                 per_page: 10,
             },
         },

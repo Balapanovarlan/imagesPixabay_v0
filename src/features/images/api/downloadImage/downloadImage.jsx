@@ -3,8 +3,10 @@ import axios from "axios";
 export const downloadImage = async (url, filename = "image.jpg") => {
   try {
     const response = await axios.get(url, { responseType: "blob" });
-
+   
     const blob = new Blob([response.data], { type: response.headers["content-type"] });
+    console.log(blob);
+    
     const link = document.createElement("a");
     link.href = URL.createObjectURL(blob);
     link.download = filename;

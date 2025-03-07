@@ -1,5 +1,7 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query"
 import Home from "./pages/Home/Home"
+import Video from "./pages/Video/Video";
+import Videos from "./pages/Videos/Videos";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -13,7 +15,7 @@ const queryClient = new QueryClient({
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
-      <Home />
+      <Video />
     </QueryClientProvider>
   )
 }
